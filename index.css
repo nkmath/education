@@ -55,7 +55,7 @@ body{
 }
 @keyframes typewriter{
   from{width: 0;}
-  to{width: 21em;}
+  to{width: 18.5em;}
 }
 @keyframes blinkTextCursor{
   from{border-right-color: #000;}
@@ -129,7 +129,7 @@ nav a:hover{
     }
   .line-1 {
     font-size: 120%;
-    max-width: 17em;
+    max-width: 15em;
   }
 }
 
