@@ -342,10 +342,10 @@ footer{
     body {
         border-right: solid 20px #FFFACD;
         border-left: solid 20px #FFFACD;
-        font-size: 60%;
+        font-size: 100%;
     }
     footer {
-        font-size: 50%;
+        font-size: 40%;
     }
     p{
 	font-size: 60%;
