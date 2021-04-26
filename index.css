@@ -66,6 +66,7 @@ body{
 
 /*****NAV*****/
 nav{
+	font-family: sans-serif;
 	width: 100vw;	/*横幅の指定*/
 	/*border-top: 1px solid orange;	上部の線の色を指定*/
 	/*border-bottom: 1px solid orange;	下部の線の色を指定*/
