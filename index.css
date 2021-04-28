@@ -133,6 +133,17 @@ nav a:hover{
   }
 }
 
+@media screen and (max-width: 600px) {
+  * {
+    float: none;
+    position: static;
+  }
+  .line-1 {
+    font-size: 200%;
+    max-width: 17em;
+  }
+}
+
 
 
 
