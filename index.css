@@ -112,6 +112,19 @@ nav a:hover{
   vertical-align: middle; /* 上下中央に寄せる */
 }
 
+
+/*タブレット・スマホ横画面用*/
+@media screen and (max-width: 900px) {
+  * {
+    float: none;
+    position: static;
+  }
+  .line-1 {
+    font-size: 200%;
+    max-width: 18em;
+  }
+}
+
 /*スマホ用*/
 @media screen and (max-width: 480px) {
   * {
@@ -133,16 +146,7 @@ nav a:hover{
   }
 }
 
-@media screen and (max-width: 1280px) {
-  * {
-    float: none;
-    position: static;
-  }
-  .line-1 {
-    font-size: 200%;
-    max-width: 18em;
-  }
-}
+
 
 
 
