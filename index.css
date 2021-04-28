@@ -136,7 +136,7 @@ nav a:hover{
     position: static;
   }
   body {
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     background: linear-gradient(-45deg, rgba(200, 200, 200, .5), rgba(100, 200, 250, .5)) fixed,
   url(image/suken_lv2.jpg) no-repeat center center;
   background-size: cover;
