@@ -114,7 +114,7 @@ nav a:hover{
 }
 
 
-/*スマホ横画面用*/
+/*タブレット・スマホ横画面用*/
 @media screen and (max-width: 900px) {
   * {
     float: none;
