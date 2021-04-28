@@ -120,9 +120,9 @@ nav a:hover{
     float: none;
     position: static;
   }
-  /*body {
-    letter-spacing: 5px;
-  }*/
+  body {
+    letter-spacing: 8px;
+  }
   .line-1 {
     font-size: 200%;
     max-width: 20em;
