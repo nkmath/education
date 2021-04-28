@@ -114,15 +114,14 @@ nav a:hover{
 
 
 /*スマホ横画面用*/
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 900px) {
   * {
     float: none;
     position: static;
   }
   .line-1 {
-    width: 18em;
     font-size: 200%;
-    max-width: 18em;
+    max-width: 25em;
   }
 }
 
