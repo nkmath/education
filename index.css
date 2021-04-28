@@ -121,8 +121,12 @@ nav a:hover{
   }
   .line-1 {
     font-size: 200%;
-    max-width: 35em;
+    max-width: 23em;
   }
+  @keyframes typewriter{
+  from{width: 0;}
+  to{width: 20.5em;}
+}
 }
 
 /*スマホ用*/
