@@ -120,8 +120,9 @@ nav a:hover{
     position: static;
   }
   .line-1 {
+    width: 18em;
     font-size: 200%;
-    max-width: 19em;
+    max-width: 18em;
   }
 }
 
