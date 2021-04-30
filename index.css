@@ -114,7 +114,15 @@ nav a:hover{
   vertical-align: middle; /* 上下中央に寄せる */
 }
 
-
+footer{
+    font-size: 80%; /*フォントサイズの指定*/
+    width: 100%;    /*横幅の指定*/
+    text-align: center; /*文字の中央寄せ*/
+    padding-top: 15px;  /*文字上部の余白指定*/
+    padding-bottom: 15px;   /*文字下部の余白指定*/
+    background-color: #313131;  /*背景色の指定*/
+    color: #fff;
+}
 
 
 /*---------------レスポンシブ-------------------*/
@@ -133,6 +141,9 @@ nav a:hover{
     font-size: 200%;
     max-width: 20em;
   }
+  footer {
+	  font-size: 20%;
+	}
 }
 
 /*スマホ用*/
@@ -154,6 +165,9 @@ nav a:hover{
     font-size: 140%;
     max-width: 15.5em;
   }
+	footer {
+	  font-size: 20%;
+	}
 }
 
 
