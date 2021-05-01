@@ -114,6 +114,45 @@ nav a:hover{
   vertical-align: middle; /* 上下中央に寄せる */
 }
 
+.flash-title {
+  display: table;　/*table*/
+  position: fixed;
+  vertical-align: middle;
+  margin: 0 auto; 
+ /* width: 100%;
+  height: 100%;*/
+  background: rgba(0,0,0,0);
+  -webkit-animation: fade-in-out 7.75s ease 0s forwards;
+  animation: fade-in-out 7.75s ease 0s forwards;
+  visibility: hidden;
+  z-index: 1;
+}
+
+/*.flash-title p {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 90px;
+  color: #fff;
+}*/
+
+.flash-title iframe {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+@-webkit-keyframes fade-in-out {
+  0% {visibility: hidden; opacity: 1;}
+  80% {visibility: visible; opacity: 1;}
+ 100% {visibility: hidden; opacity: 0;}
+}
+
+@keyframes fade-in-out {
+  0% {visibility: hidden; opacity: 1;}
+  80% {visibility: visible; opacity: 1;}
+ 100% {visibility: hidden; opacity: 0;}
+}
+
 footer{
     font-size: 80%; /*フォントサイズの指定*/
     width: 100%;    /*横幅の指定*/
@@ -164,6 +203,10 @@ footer{
   .line-1 {
     font-size: 140%;
     max-width: 15.5em;
+  }
+  .flash-title {
+	-webkit-animation: fade-in-out 6.5s ease 0s forwards;
+	animation: fade-in-out 6.5s ease 0s forwards;
   }
 	footer {
 	  font-size: 20%;
