@@ -154,6 +154,10 @@ nav a:hover{
 }
 
 footer{
+	font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+	letter-spacing: 1px;
+	position: absolute;/*←絶対位置*/
+    bottom: 0; /*下に固定*/
     font-size: 80%; /*フォントサイズの指定*/
     width: 100%;    /*横幅の指定*/
     text-align: center; /*文字の中央寄せ*/
@@ -181,7 +185,7 @@ footer{
     max-width: 20em;
   }
   footer {
-	  font-size: 20%;
+	  font-size: 60%;
 	}
 }
 
