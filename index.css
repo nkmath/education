@@ -76,6 +76,7 @@ nav{
 }
 nav ul{
 	width: 20vw;	/*横幅の指定*/
+	margin: 0 auto;
 	list-style: none; /*リストのスタイルを削除*/
 }
 nav li{
@@ -90,7 +91,6 @@ nav li{
 }*/
 nav a{
 	display: block;	/*1つのli全体にリンクを有効にする*/
-	margin: 0 auto;
 	background-color: white;
 	border-radius: 25px;
 	text-decoration: none;	/*ブラウザ標準のリンク装飾をオフに*/
