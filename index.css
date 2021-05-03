@@ -63,53 +63,24 @@ body{
   to{border-right-color: transparent;}
 }
 
+/*****ボタン*****/
+.btn {
+  font-family: sans-serif;
+  line-height: 30px;
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: black;
+  /*border: solid 2px black;*/
+  background-color: white;
+  border-radius: 3px;
+  transition: .4s;
+  letter-spacing: 1px;
+}
 
-
-
-.btn,
-a.btn {
-	font-family: sans-serif;
-	width: 20vw;	/*横幅の指定*/
-	/*border-top: 1px solid orange;	上部の線の色を指定*/
-	/*border-bottom: 1px solid orange;	下部の線の色を指定*/
-	background-color: white;
-	letter-spacing: 1px;
-	text-decoration: none;
-	border-radius: 25px;
-	text-align: center;
-	overflow: hidden;	/*おまじない*/
-}
-nav ul{
-	width: 20vw;	/*横幅の指定*/
-	list-style: none; /*リストのスタイルを削除*/
-}
-nav li{
-	width: calc(100% / 1);	/*横幅の指定*/
-	/*border-left: 1px solid orange;	線を描く*/
-	box-sizing: border-box; /*線の幅をliの横幅に含める*/
-	text-align: center;	/*文字を中央に*/
-	float: left;	/*左から並べる*/
-}
-/*nav li:last-child{
-	border-right: 1px solid orange;	/*li要素の最後の物は右側に線を描く
-}*/
-nav a{
-	display: block;	/*1つのli全体にリンクを有効にする*/
-	background-color: white;
-	text-decoration: none;	/*ブラウザ標準のリンク装飾をオフに*/
-	color:#313131;	/*文字色の変更*/
-	font-size: 110%;	/*フォントサイズの指定*/
-	letter-spacing: 1px;	/*文字と文字の間隔をあける*/
-	font-weight: 400;	/*文字の太さを調整*/
-	line-height: 45px;	/*行間の指定（ナビボタンの高さ指定）*/
-}
-.btn:hover,
-a.btn {
-	background-color: orange;	/*背景色の指定*/
-	color: #fff;	/*文字色の変更*/
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
-	transition: all 0.5s;	/*ホバー時の動きをなめらかにする*/
+.btn:hover {
+  background-color: orange;
+  color: white;
 }
 
 .vertical-middle{
