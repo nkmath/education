@@ -65,13 +65,14 @@ body{
 
 
 
-/*****NAV*****/
-nav{
+
+.btn {
 	font-family: sans-serif;
-	width: 100vw;	/*横幅の指定*/
+	width: 20vw;	/*横幅の指定*/
 	/*border-top: 1px solid orange;	上部の線の色を指定*/
 	/*border-bottom: 1px solid orange;	下部の線の色を指定*/
-	margin-bottom: 5px;	/**/
+	background-color: white;
+	text-align: center;
 	overflow: hidden;	/*おまじない*/
 }
 nav ul{
@@ -99,7 +100,8 @@ nav a{
 	font-weight: 400;	/*文字の太さを調整*/
 	line-height: 45px;	/*行間の指定（ナビボタンの高さ指定）*/
 }
-nav a:hover{
+.btn:hover,
+a.btn {
 	background-color: orange;	/*背景色の指定*/
 	color: #fff;	/*文字色の変更*/
 	-webkit-transition: all 0.5s;
