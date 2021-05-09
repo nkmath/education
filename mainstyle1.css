@@ -7,7 +7,7 @@ a:link {
 }
 
 a:visited {
-	color: #6927FF;
+	color: #7B3CFF;
 }
 
 a:hover {
@@ -159,7 +159,7 @@ p {
 body{
         font: 14px/1.6 "Hiragino Kaku Gothic Pro",Osaka,"メイリオ","ＭＳ Ｐゴシック","MS PGothic",Verdana,Arial,sans-serif;
 	background-color: #fff;
-	color: #555;
+	color: #313131;
 	margin: 0;
 	border-top: 0;
 	/*border-right: solid 60px #FFFACD;
