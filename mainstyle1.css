@@ -123,7 +123,7 @@ h2:after {
 h3 {
 	border-bottom: solid 3px skyblue;
 	position: relative;
-	margin-left: 3px;
+	margin-left: 0px;
 }
 
 h3:after {
@@ -151,7 +151,7 @@ td.ue{
 p {
 	/*max-width: 800px;
 	min-width: 500px;*/
-	max-width: 70vw;
+	max-width: 95vw;
 	margin-left: 10px;
 }
 
@@ -223,11 +223,11 @@ img {
 }
 
 ul {
-	max-width: 65vw;
+	max-width: 90vw;
 }
 
 ol {
-	max-width: 65vw;
+	max-width: 90vw;
 }
 
 ol li {
@@ -353,7 +353,6 @@ footer{
     }
     p{
 	font-size: 80%;
-        /*min-width: 100px;*/
     }
     small {
 	    font-size: 40%;
