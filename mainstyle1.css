@@ -151,7 +151,7 @@ td.ue{
 p {
 	/*max-width: 800px;
 	min-width: 500px;*/
-	max-width: 95vw;
+	max-width: 85vw;
 	margin-left: 10px;
 }
 
@@ -223,11 +223,11 @@ img {
 }
 
 ul {
-	max-width: 90vw;
+	max-width: 80vw;
 }
 
 ol {
-	max-width: 90vw;
+	max-width: 80vw;
 }
 
 ol li {
