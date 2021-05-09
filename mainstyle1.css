@@ -158,13 +158,15 @@ p {
 
 body{
         font: 14px/1.6 "Hiragino Kaku Gothic Pro",Osaka,"メイリオ","ＭＳ Ｐゴシック","MS PGothic",Verdana,Arial,sans-serif;
-	background-color: white;
+	background-color: #fff;
+	color: #555;
 	margin: 0;
 	border-top: 0;
-	border-right: solid 60px #FFFACD;
-	border-left: solid 60px #FFFACD;/* #FFFACD */
+	/*border-right: solid 60px #FFFACD;
+	border-left: solid 60px #FFFACD;#FFFACD */
+	margin: 0 60px 0 60px;
 	border-bottom: 0;
-	/*min-height: 100vh;*/
+	min-height: 100vh;
 }
 /*#fff8dc*/
 /*ivory fffff0 */
@@ -344,6 +346,7 @@ footer{
 @media screen and (max-width: 900px) {
 	body {
         font-size: 100%;
+        margin: 0 40px 0 40px;
     }
     footer {
         font-size: 60%;
@@ -389,8 +392,9 @@ footer{
 	height: auto;
     }
     body {
-        border-right: solid 20px #FFFACD;
-        border-left: solid 20px #FFFACD;
+        /*border-right: solid 20px #FFFACD;
+        border-left: solid 20px #FFFACD;*/
+        margin: 0 20px 0 20px;
         font-size: 100%;
     }
     footer {
