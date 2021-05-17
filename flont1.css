@@ -46,17 +46,17 @@ body{
     white-space: nowrap;
     overflow: hidden;
     transform: translateY(-50%);
-    color: white;
+    color: #EEEEEE;
 }
 
 /* Animation */
 .anim-typewriter{
-  animation: typewriter 4s steps(44) 1s 1 normal both,
- blinkTextCursor 600ms steps(44) infinite normal;
+  animation: typewriter 3.5s steps(40) 1s 1 normal both,
+ blinkTextCursor 700ms steps(40) infinite normal;
 }
 @keyframes typewriter{
   from{width: 0;}
-  to{width: 18.5em;}
+  to{width: 15em;}
 }
 @keyframes blinkTextCursor{
   from{border-right-color: #000;}
@@ -72,7 +72,7 @@ body{
   text-decoration: none;
   color: black;
   /*border: solid 2px black;*/
-  background-color: white;
+  background-color: #EEEEEE;
   border-radius: 3px;
   transition: .4s;
   letter-spacing: 1px;
@@ -80,7 +80,7 @@ body{
 
 .btn:hover {
   background-color: orange;
-  color: white;
+  color: #fff;
 }
 
 .vertical-middle{
@@ -139,7 +139,7 @@ footer{
     padding-top: 15px;  /*文字上部の余白指定*/
     padding-bottom: 15px;   /*文字下部の余白指定*/
     background-color: #313131;  /*背景色の指定*/
-    color: #fff;
+    color: #CCCCCC;
 }
 
 
@@ -181,7 +181,7 @@ footer{
     }
   .line-1 {
     font-size: 140%;
-    max-width: 15.5em;
+    max-width: 12.5em;
   }
   .flash-title {
 	-webkit-animation: fade-in-out 6.25s ease 0s forwards;
