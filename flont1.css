@@ -181,7 +181,7 @@ footer{
     }
   .line-1 {
     font-size: 140%;
-    max-width: 12.5em;
+    max-width: 13em;
   }
   .flash-title {
 	-webkit-animation: fade-in-out 6.25s ease 0s forwards;
