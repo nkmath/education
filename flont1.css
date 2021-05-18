@@ -180,6 +180,7 @@ footer{
         font-size: 60%;
     }
   .line-1 {
+    text-shadow: 0.5px 0 0 #555,0 0.5px 0 #555,-0.5px 0 0 #555,0 -0.5px 0 #555,2.5px 2.5px 0 #555;
     font-size: 140%;
     max-width: 13em;
   }
