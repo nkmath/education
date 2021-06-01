@@ -1,0 +1,147 @@
+\documentclass[a4paper,onecolumn,dvipdfmx]{jsarticle}
+%b4paperは用紙のサイズ，b4のところをa4に変更などすればサイズも変わる，landscapleは用紙横向き%
+\usepackage[top=20truemm,bottom=20truemm,left=15truemm,right=15truemm]{geometry}
+%余白の設定，単位はcm,mmでも可%
+
+
+%様々なパッケージたち，パッケージ同士で衝突することもあるので注意が必要%
+\usepackage{okumacro}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{mathrsfs}
+\usepackage[dvipdfmx,hidelinks]{hyperref}
+\usepackage{pxjahyper}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{ascmac}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[dvipdfmx]{color}
+\usepackage{graphics}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{bm}
+\usepackage{bbm}
+\usepackage{picture}
+\usepackage{fancybox}
+\usepackage[deluxe]{otf}
+\usepackage{stmaryrd}
+\usepackage{hhline}
+\usepackage{longtable}
+
+
+%定理環境%
+\usepackage{amsthm}
+\usepackage[xcolor]{mdframed}
+\usepackage{silence}\WarningFilter{mdframed}{You got a bad break}
+\let\oldtheorem=\newtheorem
+\mdfdefinestyle{leftbar}{topline=false,rightline=false,bottomline=false,innertopmargin=0pt,linewidth=1pt,linecolor=black} \newcommand{\NewTheorem}[2][linecolor=black]{\surroundwithmdframed[style=leftbar,#1]{#2}\oldtheorem{#2}}
+\newcommand{\NewTheoremStar}[2][linecolor=black]{\surroundwithmdframed[style=leftbar,#1]{#2}\oldtheorem*{#2}}
+\makeatletter\renewcommand{\newtheorem}{\@ifstar{\NewTheoremStar}{\NewTheorem}}\makeatother
+\newtheoremstyle{mydefinition}{\topsep}{\topsep}{\rmfamily}{0pt}{\sffamily\gtfamily\bfseries}{.}{.5em}
+{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}\rmfamily}
+\theoremstyle{mydefinition}
+
+\newtheorem{dfn}{定義}
+\newtheorem[leftline=false,backgroundcolor=black!30!white]{thm}[dfn]{定理}
+\newtheorem{prop}[dfn]{命題}
+\newtheorem{lem}[dfn]{補題}
+\newtheorem{cor}[dfn]{系}
+\newtheorem{fact}{事実}
+\newtheorem{exam}{例題}
+\newtheorem{axi}{公理}
+\newtheorem{prob}{問題}
+
+
+%番号付けの設定，arabicがアラビア数字(1,2,3,4,...)，alphはアルファベット(a,b,c,d,...)，romanはローマ数字(i,ii,iii,iv,...)%
+\renewcommand{\labelenumi}{\textbf{\textsf{\arabic{enumi}}.}} %一番外の番号(例えば，大問みたいな感じ)%
+\renewcommand{\labelenumii}{(\arabic{enumii})}%二番目の番号(例えば，大問のつぎの数字)%
+\renewcommand{\labelenumiii}{(\alph{enumiii})}%三番目の番号(例えば，小問みたいな感じ)%
+\renewcommand{\thefootnote}{\arabic{footnote})}%注釈の番号%
+
+
+%いちいち，打つのがめんどくさかったり，覚えにくい既存のコマンドを，自分用に設定%
+%以下，\newcommand{\*}{\***}タイプ：本来，"\***"と入力すべきところを"\*"と省略%
+\newcommand{\s}{\mathfrak{S}}
+\newcommand{\bs}{\textbackslash}
+\newcommand{\txhat}{\textasciicircum}
+\newcommand{\vsp}{\vspace{.25zw}}
+
+%以下，\newcommand{\**}[n]{\***{#i}\*{#j}.../****{#k}} (n,i,j,kは何かしらの数値;i,j,kはn以下の数値で相異なる)タイプ：nは引数，"\**{#1}{#2}...{#n}"と入力すれば，"\***{#i}\*{#j}.../****{#k}"が実行される%
+\newcommand{\lfrac}[2]{\left(\frac{#1}{#2}\right)}
+\newcommand{\Vect}[1]{\overrightarrow{\mathrm{#1}}}
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\newcommand{\abs}[1]{\left|#1\right|}
+
+%既存の環境を自分でオリジナルな環境に設定，最近使い始めたのでちゃんとは理解していない%
+\newenvironment{smallpmatrix}{\left(\begin{smallmatrix}}{\end{smallmatrix}\right)}
+\newenvironment{smallvmatrix}{\left|\begin{smallmatrix}}{\end{smallmatrix}\right|}
+\newenvironment{smallbmatrix}{\left[\begin{smallmatrix}}{\end{smallmatrix}\right]}
+
+\renewcommand{\footrulewidth}{0.4pt}%下の線%
+\setlength{\columnseprule}{0.4pt}%真ん中の線%
+\pagestyle{fancy}
+\lhead{数学探求I,I\hspace{-0.1em}I\quad データの分析 補足}%枠外右上の文字%
+\chead{}
+\cfoot{(\thepage/\pageref{LastPage})}
+\lfoot{}%枠外左下の文字%
+\rfoot{文責：中橋}%枠外右下の文字%
+%\rhead{\underline{\qquad\qquad}\,年\ \underline{\qquad\qquad}\,組\ \underline{\qquad\qquad}\,番\quad 氏名\,\underline{\hspace{20zw}}}%枠外左上の文字%
+
+
+\newcommand{\ans}[1]{{\color{white}\bf{#1}}}
+
+
+\hypersetup{ pdftitle={},pdfauthor={Kentaro NAKAHASHI}}
+\AtBeginDvi{\special{pdf:encrypt ownerpw(nk210512) userpw(r3mq1-2)length 128 perm 0}}
+
+\allowdisplaybreaks
+\begin{document}
+\gtfamily
+	\section*{\textbf{変量の変換}}
+	\begin{thm}
+	\gtfamily
+		$a,\ b$を定数とする. 変量$x$のデータから$y=ax+b$によって新たな変量$y$のデータが得られるとき, $x,\ y$のデータの平均値を$\overline{x},\ \overline{y}$, 分散を${s_x}^2,\ {s_y}^2$, 標準偏差を$s_x,\ s_y$とすると, 次が成り立つ：\[\overline{y}=a\overline{x}+b,\quad {s_y}^2=a^2{s_x}^2,\quad s_y=\abs{a}{s_x}_.\]
+	\end{thm}
+	
+	\noindent\textbf{証明.}
+	
+	変量$x$のデータを\[x_1,\ x_2,\ \ldots,x_n\]とすると, 変量$y$のデータ$y_1,\ y_2,\ \ldots,y_n$はそれぞれ\[ax_1+b,\ ax_2+b,\ \ldots,ax_n+b\]となる. このとき, 
+	\begin{align*}
+		\overline{y}&=\dfrac{1}{n}\bigg(y_1+y_2+\cdots+y_n\bigg)\\[1zw]
+		                 &=\dfrac{1}{n}\bigg\{(ax_1+b)+(ax_2+b)+\cdots+(ax_n+b)\bigg\}\\[1zw]
+		                 &=\dfrac{1}{n}\bigg\{a(x_1+x_2+\cdots+x_n)+nb\bigg\}\\[1zw]
+		                 &=a\cdot\dfrac{1}{n}\bigg(x_1+x_2+\cdots+x_n\bigg)+b\\[1zw]
+		                 &=a\overline{x}+b
+	\end{align*}
+	よって, $\overline{y}=a\overline{x}+b.$\\
+	
+	\noindent 次に, $y$の分散${s_y}^2$は
+	\begin{align*}
+		{s_y}^2&=\dfrac{1}{n}\bigg\{(y_1-\overline{y})^2+(y_2-\overline{y})^2+\cdots+(y_n-\overline{y})^2\bigg\}\\[1zw]
+		&=\dfrac{1}{n}\bigg[\big\{(ax_1+b)-(a\overline{x}+b)\big\}^2+\big\{(ax_2+b)-(a\overline{x}+b)\big\}^2+\cdots+\big\{(ax_n+b)-(a\overline{x}+b)\big\}^2\bigg]\\[1zw]
+		&=\dfrac{1}{n}\bigg[\big\{a(x_1-\overline{x})\big\}^2+\big\{a(x_2-\overline{x})\big\}^2+\cdots+\big\{a(x_n-\overline{x})\big\}^2\bigg]\\[1zw]
+		&=a^2\cdot\dfrac{1}{n}\bigg\{(x_1-\overline{x})^2+(x_2-\overline{x})^2+\cdots+(x_n-\overline{x})^2\bigg\}\\[1zw]
+		&=a^2{s_x}^2
+	\end{align*}
+	よって, ${s_y}^2=a^2{s_x}^2.$\\
+	
+	\noindent 最後に, $y$の標準偏差$s_y$は$s_y=\sqrt{{s_y}^2}=\sqrt{a^2{s_x}^2}=\abs{a}{s_x}$となる. \hfill$\qed$\\
+	
+	
+	
+	\noindent\textbf{補足:} 一般に実数$x$に対して, $\sqrt{x^2}=\abs{x}$である. $\sqrt{x^2}=x$でない理由は...例えば, $2=\sqrt{4}=\sqrt{(-2)^2}.$
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+\end{document}
