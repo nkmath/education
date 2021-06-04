@@ -1,6 +1,6 @@
-\documentclass[a4paper,onecolumn,dvipdfmx]{jsarticle}
+\documentclass[a4paper,twocolumn,dvipdfmx]{jsarticle}
 %b4paperは用紙のサイズ，b4のところをa4に変更などすればサイズも変わる，landscapleは用紙横向き%
-\usepackage[top=20truemm,bottom=20truemm,left=15truemm,right=15truemm]{geometry}
+\usepackage[top=20truemm,bottom=20truemm,left=13truemm,right=13truemm]{geometry}
 %余白の設定，単位はcm,mmでも可%
 
 
@@ -52,11 +52,11 @@
 \newtheorem{exam}{例題}
 \newtheorem{axi}{公理}
 \newtheorem{prob}{問題}
-
+\newtheorem[leftline=false]{prac}{練習}
 
 %番号付けの設定，arabicがアラビア数字(1,2,3,4,...)，alphはアルファベット(a,b,c,d,...)，romanはローマ数字(i,ii,iii,iv,...)%
-\renewcommand{\labelenumi}{\textbf{\textsf{\arabic{enumi}}.}} %一番外の番号(例えば，大問みたいな感じ)%
-\renewcommand{\labelenumii}{(\arabic{enumii})}%二番目の番号(例えば，大問のつぎの数字)%
+\renewcommand{\labelenumii}{\textbf{\textsf{\arabic{enumii}}.}} %一番外の番号(例えば，大問みたいな感じ)%
+\renewcommand{\labelenumi}{(\arabic{enumi})}%二番目の番号(例えば，大問のつぎの数字)%
 \renewcommand{\labelenumiii}{(\alph{enumiii})}%三番目の番号(例えば，小問みたいな感じ)%
 \renewcommand{\thefootnote}{\arabic{footnote})}%注釈の番号%
 
@@ -107,23 +107,23 @@
 	
 	\noindent\textbf{証明.}
 	
-	変量$x$のデータを\[x_1,\ x_2,\ \ldots,x_n\]とすると, 変量$y$のデータ$y_1,\ y_2,\ \ldots,y_n$はそれぞれ\[ax_1+b,\ ax_2+b,\ \ldots,ax_n+b\]となる. このとき, 
+	\noindent 変量$x$のデータを\[x_1,\ x_2,\ \ldots,\ x_n\]とすると, 変量$y$のデータ$y_1,\ y_2,\ \ldots,y_n$はそれぞれ\[ax_1+b,\ ax_2+b,\ \ldots,\ ax_n+b\]となる. このとき, $y$の平均$\overline{y}$は
 	\begin{align*}
-		\overline{y}&=\dfrac{1}{n}\bigg(y_1+y_2+\cdots+y_n\bigg)\\[1zw]
-		                 &=\dfrac{1}{n}\bigg\{(ax_1+b)+(ax_2+b)+\cdots+(ax_n+b)\bigg\}\\[1zw]
-		                 &=\dfrac{1}{n}\bigg\{a(x_1+x_2+\cdots+x_n)+nb\bigg\}\\[1zw]
-		                 &=a\cdot\dfrac{1}{n}\bigg(x_1+x_2+\cdots+x_n\bigg)+b\\[1zw]
-		                 &=a\overline{x}+b
+		\overline{y}\hspace{.5zw}&=\hspace{.5zw}\dfrac{1}{n}\bigg(y_1+y_2+\cdots+y_n\bigg)\\[1zw]
+		                 &=\hspace{.5zw}\dfrac{1}{n}\bigg\{(ax_1+b)+(ax_2+b)+\cdots+(ax_n+b)\bigg\}\\[1zw]
+		                 &=\hspace{.5zw}\dfrac{1}{n}\bigg\{a(x_1+x_2+\cdots+x_n)+nb\bigg\}\\[1zw]
+		                 &=\hspace{.5zw}a\cdot\dfrac{1}{n}\bigg(x_1+x_2+\cdots+x_n\bigg)+b\\[1zw]
+		                 &=\hspace{.5zw}a\overline{x}+b
 	\end{align*}
 	よって, $\overline{y}=a\overline{x}+b.$\\
 	
 	\noindent 次に, $y$の分散${s_y}^2$は
 	\begin{align*}
-		{s_y}^2&=\dfrac{1}{n}\bigg\{(y_1-\overline{y})^2+(y_2-\overline{y})^2+\cdots+(y_n-\overline{y})^2\bigg\}\\[1zw]
-		&=\dfrac{1}{n}\bigg[\big\{(ax_1+b)-(a\overline{x}+b)\big\}^2+\big\{(ax_2+b)-(a\overline{x}+b)\big\}^2+\cdots+\big\{(ax_n+b)-(a\overline{x}+b)\big\}^2\bigg]\\[1zw]
-		&=\dfrac{1}{n}\bigg[\big\{a(x_1-\overline{x})\big\}^2+\big\{a(x_2-\overline{x})\big\}^2+\cdots+\big\{a(x_n-\overline{x})\big\}^2\bigg]\\[1zw]
-		&=a^2\cdot\dfrac{1}{n}\bigg\{(x_1-\overline{x})^2+(x_2-\overline{x})^2+\cdots+(x_n-\overline{x})^2\bigg\}\\[1zw]
-		&=a^2{s_x}^2
+		{s_y}^2\hspace{.5zw}&=\hspace{.5zw}\dfrac{1}{n}\bigg\{(y_1-\overline{y})^2+(y_2-\overline{y})^2+\cdots+(y_n-\overline{y})^2\bigg\}\\[1zw]
+		&=\hspace{.5zw}\dfrac{1}{n}\sum_{k=1}^n\big\{(ax_k+b)-(a\overline{x}+b)\big\}^2\\[1zw]
+		&=\hspace{.5zw}\dfrac{1}{n}\sum_{k=1}^n\big\{a(x_k-\overline{x})\big\}^2\\[1zw]
+		&=\hspace{.5zw}a^2\cdot\dfrac{1}{n}\bigg\{(x_1-\overline{x})^2+(x_2-\overline{x})^2+\cdots+(x_n-\overline{x})^2\bigg\}\\[1zw]
+		&=\hspace{.5zw}a^2{s_x}^2
 	\end{align*}
 	よって, ${s_y}^2=a^2{s_x}^2.$\\
 	
@@ -131,8 +131,70 @@
 	
 	
 	
-	\noindent\textbf{補足:} 一般に実数$x$に対して, $\sqrt{x^2}=\abs{x}$である. $\sqrt{x^2}=x$でない理由は...例えば, $2=\sqrt{4}=\sqrt{(-2)^2}.$
+	\noindent\textbf{補足:} 一般に実数$x$に対して, $\sqrt{x^2}=\abs{x}$である. $\sqrt{x^2}=x$でない理由は...例えば, $2=\sqrt{4}=\sqrt{(-2)^2}.$\\
 
+	
+	\begin{shadebox}
+		\begin{prac}[教科書p.175]
+			ある都市の日ごとの最高気温を摂氏度$(^\circ\mathrm{C})$で計測し, 20日分のデータを得た. その平均値は$15.0\,^\circ\mathrm{C}$, 分散は$9.0$であった. このデータを華氏度$(^\circ\mathrm{F})$に変更したときの, 平均値, 分散, 標準偏差を求めよ. ただし, 摂氏度が$x\,^\circ\mathrm{C}$のときの華氏度を$y\,^\circ\mathrm{F}$とすると, $x$と$y$には次の関係がある.\[y=1.8x+32\]
+		\end{prac}
+		
+		
+	\end{shadebox}
+
+	
+	\newpage
+	\subsection*{\textbf{分散と平均値の関係式}}\vsp\vsp\vsp\vsp
+	
+	\begin{thm}
+	\gtfamily
+	変量$u$に対して次の等式が成り立つ.
+		\begin{align*}
+			{s_u}^2\quad&=\quad\overline{u^2}-(\overline{u})^2\\
+			                     &=\quad(u^2\text{の平均値})-(u\text{の平均値})^2.
+		\end{align*}
+	\end{thm}
+	
+	\noindent\textbf{証明.}
+	
+	\noindent 変量$u$のデータを\[u_1,\ u_2,\ \ldots,\ u_n\]とする. このとき, $u$の分散${s_u}^2$は
+	\[{s_u}^2=\dfrac{1}{n}\bigg\{(u_1-\overline{u})^2+(u_2-\overline{u})^2+\cdots+(u_n-\overline{u})^2\bigg\}\]で与えられるから, 右辺を式変形すると
+	\begin{align*}
+	{s_u}^2\hspace{.5zw}&=\hspace{.5zw}\dfrac{1}{n}\bigg\{(u_1-\overline{u})^2+(u_2-\overline{u})^2+\cdots+(u_n-\overline{u})^2\bigg\}\\[1zw]
+	&=\hspace{.5zw}\dfrac{1}{n}\left\{\sum_{k=1}^n{u_k}^2-2\overline{u}\sum_{k=1}^nu_k+n(\overline{u})^2\right\}\\[1zw]
+	&=\hspace{.5zw}\underbrace{\dfrac{1}{n}\sum_{k=1}^n{u_k}^2}_{=\overline{u^2}}-2\overline{u}\cdot\underbrace{\dfrac{1}{n}\sum_{k=1}^nu_k}_{\large=\overline{u}}+(\overline{u})^2\\[1zw]
+	&=\hspace{.5zw}\overline{u^2}-(\overline{u})^2
+	\end{align*}
+	ゆえに等式が成り立つ.\hfill$\qed$\\
+	
+	\noindent ※スペースの関係で足し算$(+\cdots+)$を省略して$\sum$(シグマ)の記号を使っている. 念のため説明しておくと \[\sum_{k=1}^na_k=a_1+a_2+\cdots+a_n\]の意味である. 詳しくは数学\textsf{B}の数列の単元参照.
+	
+	\newpage
+	
+	\begin{shadebox}
+		\begin{prac}[教科書p.175]
+			変量$x$のデータが次のように与えられている.\[750,\ 740,\ 720,\ 770,\ 750,\ 740\]いま, $c=10,\ x_0=740,\ u=\dfrac{x-x_0}{c}$として新しい変量$u$を作る.\footnotemark
+			\begin{enumerate}
+				\item 変量$u$のデータの平均値と標準偏差を求めよ.
+				\item 変量$x$のデータの平均値と標準偏差を求めよ.
+			\end{enumerate}
+		\end{prac}
+	\end{shadebox}
+	
+	
+	\begin{center}
+		\begin{tabular}{c||c|c|c|c|c|c|c}
+		\hline
+			$x$&750&740&720&770&750&740&$\setminus$\\\hline
+			$u$&&&&&&&計\textcolor{white}{あああ}\\\hline
+			$u^2$&&&&&&&計\textcolor{white}{あああ}\\\hline
+		\end{tabular}
+
+	\end{center}
+
+	\footnotetext[1]{\gtfamily この$x_0$のことを\textbf{\gtfamily 仮平均}という.}
+	
+	
 	
 	
 	
