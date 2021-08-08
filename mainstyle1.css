@@ -339,9 +339,7 @@ footer{
 
 
 
-/*-------レスポンシブ---------*/
-
-
+/*----------------------レスポンシブ----------------------*/
 
 
 /*タブレット・スマホ横画面用*/
@@ -379,6 +377,22 @@ footer{
     }
     header{
          font-size: 170%;
+    }
+    /*ダークモード*/
+    @media (prefers-color-scheme: dark) {
+    	body {
+    		background-color: #000;
+    		color: #AAAAAA;
+    	}
+    	a:link {
+    		color: #8EB8FF;
+    	}
+    	a:visited {
+    		color: #C299FF;
+    	}
+    	a:hover {
+    		color: #FF9872;
+    	}
     }
 }
 
@@ -435,6 +449,22 @@ footer{
     }
     header{
          font-size: 150%;
+    }
+    /*ダークモード*/
+    @media (prefers-color-scheme: dark) {
+    	body {
+    		background-color: #000;
+    		color: #AAAAAA;
+    	}
+    	a:link {
+    		color: #8EB8FF;
+    	}
+    	a:visited {
+    		color: #C299FF;
+    	}
+    	a:hover {
+    		color: #FF9872;
+    	}
     }
 }
 
